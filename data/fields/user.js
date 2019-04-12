@@ -10,6 +10,10 @@ export const userFields = {
     type: GraphQLID,
     resolve: obj => obj.user_id
   },
+  access_token: {
+    type: GraphQLString,
+    resolve: obj => obj.access_token
+  },
   username: {
     type: GraphQLString,
     resolve: obj => obj.username

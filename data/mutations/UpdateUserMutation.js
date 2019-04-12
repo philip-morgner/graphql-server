@@ -4,22 +4,25 @@ import {
   GraphQLNonNull
 } from "graphql";
 import { fetch } from "../../utils/fetch";
-import { updateUserOutputType, updateUserInputType } from "../types/user";
+import { userType, updateUserInputType } from "../types/user";
+import { omit } from "ramda";
 
 export default {
-  type: updateUserOutputType,
+  type: userType,
   args: {
     userId: { type: new GraphQLNonNull(GraphQLString) },
-    payload: { type: updateUserInputType }
+    updateUser: { type: updateUserInputType },
+    confirmPassword: { type: new GraphQLNonNull(GraphQLString) }
   },
-  resolve: async (obj, params, context, info) => {
-    const url = `http://localhost:4000/api/users/${params.userId}`;
-
+  resolve: async (obj, args, context, info) => {
+    const url = `http://localhost:4000/api/users/${args.userId}`;
+    const payload = omit(["userId"], args);
+    console.log("payload gql", payload);
     const updatedUser = await fetch(
       "POST",
       url,
       context.access_token,
-      params.payload
+      payload
     ).catch(console.log);
 
     return updatedUser;

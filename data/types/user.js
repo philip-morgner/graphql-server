@@ -59,11 +59,6 @@ export const removeUserType = new GraphQLObjectType({
   fields: removeUserFields
 });
 
-export const updateUserOutputType = new GraphQLObjectType({
-  name: "UpdateUserType",
-  fields: userFields
-});
-
 export const updateUserInputType = new GraphQLInputObjectType({
   name: "UpdateUserInputType",
   //  do not update the unique user_id -> only change creation fields

@@ -16,7 +16,7 @@ import RemoveMessageMutation from "./mutations/RemoveMessageMutation";
 const MutationSchema = new GraphQLObjectType({
   name: "MutationSchema",
   fields: {
-    currUser: RegistrationMutation,
+    registerUser: RegistrationMutation,
     currUser: AuthenticationMutation,
     updateUser: UpdateUserMutation,
     removeUser: RemoveUserMutation,
