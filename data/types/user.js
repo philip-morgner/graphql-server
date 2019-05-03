@@ -15,7 +15,7 @@ export const userType = new GraphQLObjectType({
 
 export const registerOutputType = new GraphQLObjectType({
   name: "RegistrationType",
-  fields: tokenIdOutputField
+  fields: userFields
 });
 
 export const registerInputType = new GraphQLInputObjectType({

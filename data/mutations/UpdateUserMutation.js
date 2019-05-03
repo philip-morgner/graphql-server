@@ -17,7 +17,6 @@ export default {
   resolve: async (obj, args, context, info) => {
     const url = `http://localhost:4000/api/users/${args.userId}`;
     const payload = omit(["userId"], args);
-    console.log("payload gql", payload);
     const updatedUser = await fetch(
       "POST",
       url,

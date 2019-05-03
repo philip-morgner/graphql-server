@@ -1,7 +1,6 @@
 import { fetch } from "../../utils/fetch";
 import { authInputType, authType } from "../types/user";
 
-// TODO rework
 export default {
   type: authType,
   args: {
@@ -15,16 +14,14 @@ export default {
       null,
       params.authUser
     ).catch(console.log);
+
     if (!currUser) {
       return {};
     }
-    if (currUser.hasAvatar) {
-      currUser.avatar = `http://localhost:4000/api/users/${
-        currUser.user_id
-      }/avatar`;
-    }
+    currUser.avatar = `http://localhost:4000/api/users/${
+      currUser.user_id
+    }/avatar/${currUser.lastAvatarUpdate}`;
 
-    console.log(currUser);
     return currUser;
   }
 };

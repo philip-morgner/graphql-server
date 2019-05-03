@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /home/philip-morgner/.yarn/bin/yarn.js update
+  /usr/bin/node /home/philip-morgner/.yarn/bin/yarn.js start-sub-task
 
 PATH: 
   /home/philip-morgner/hapi-graphql-relay/graphql/node_modules/.bin:/home/philip-morgner/hapi-graphql-relay/graphql/node_modules/.bin:/home/philip-morgner/.config/yarn/link/node_modules/.bin:/home/philip-morgner/hapi-graphql-relay/graphql/node_modules/.bin:/home/philip-morgner/.config/yarn/link/node_modules/.bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/philip-morgner/.yarn/bin:/home/philip-morgner/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -49,6 +49,7 @@ npm manifest:
       "lodash": "^4.17.4",
       "lowdb": "^1.0.0",
       "moment": "^2.20.1",
+      "ramda": "^0.26.1",
       "webpack": "^3.8.1",
       "webpack-dev-server": "2.9.4"
     }
@@ -3973,6 +3974,10 @@ Lockfile:
     version "2.1.0"
     resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.1.0.tgz#7ded8dfbf7879dcc60d0a644ac6754b283ad17ef"
   
+  ramda@^0.26.1:
+    version "0.26.1"
+    resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+  
   randomatic@^3.0.0:
     version "3.1.1"
     resolved "https://registry.yarnpkg.com/randomatic/-/randomatic-3.1.1.tgz#b776efc59375984e36c537b2f51a1f0aff0da1ed"
@@ -5163,9 +5168,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit signal: SIGUSR2
   Command: sh
-  Arguments: -c ./node_modules/.bin/babel-node ./utils/updateSchema.js
+  Arguments: -c ./node_modules/.bin/babel-node ./index.js
   Directory: /home/philip-morgner/hapi-graphql-relay/graphql
   Output:
   

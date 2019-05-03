@@ -33,6 +33,7 @@
     "lodash": "^4.17.4",
     "lowdb": "^1.0.0",
     "moment": "^2.20.1",
+    "ramda": "^0.26.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "2.9.4"
   }

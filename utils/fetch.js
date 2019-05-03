@@ -1,11 +1,5 @@
 import http from "http";
 
-// const AUTH_URL = "http://localhost:4000/api/users/login";
-// const TESTER_CREDENTIALS = { email: "tester3@testing.de", password: "tester3" };
-
-// export const auth = () =>
-//   fetch("POST", AUTH_URL, undefined, TESTER_CREDENTIALS);
-
 export const fetch = (method, url, auth = "", payload) =>
   new Promise((resolve, reject) => {
     const path = url.slice(url.indexOf("/api"));

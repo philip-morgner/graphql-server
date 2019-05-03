@@ -1,4 +1,4 @@
-import { GraphQLString } from "graphql";
+import { GraphQLString, GraphQLInt } from "graphql";
 import { fetch } from "../../utils/fetch";
 import { userType } from "../types/user";
 
@@ -15,10 +15,8 @@ export default {
     if (!user) {
       return {};
     }
-    user.avatar = undefined;
-    if (user.hasAvatar) {
-      user.avatar = url + "/avatar";
-    }
+    user.avatar = url + "/avatar/" + user.lastAvatarUpdate;
+
     return user;
   }
 };

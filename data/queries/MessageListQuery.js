@@ -10,6 +10,7 @@ export default {
     const messageList = await fetch("GET", url, context.access_token).catch(
       console.log
     );
+    console.log("messageList", messageList);
 
     return messageList || [];
   }
